@@ -1,22 +1,25 @@
 //document.getElementById('result').addEventListener('click', display);
 //import
-const button = document.getElementById('result');
-function diplay(val){
 
-    let a = document.getElementById('result') += val 
+
+const button: any = document.getElementById('result');
+
+function display(val: string): string {
+    const result: HTMLInputElement = document.getElementById('result') as HTMLInputElement;
+    result.value += val;
     return val;
-    console.log(val);
-};
+}
 
-function solve() {
-    let x = document.getElementById('result') ;
-    let y = eval(x);
+function solve(): number {
+    const result: HTMLInputElement = document.getElementById('result') as HTMLInputElement;
+    const x: string = result.value;
+    const y: number = eval(x);
+    result.value = y.toString();
+    return y;
+}
 
-    document.getElementById('result') = y;
-        return y;
-};
-
-function clearScreen(){
-    document.getElementById('result').wid= '';
-};
+function clearScreen(): void {
+    const result: HTMLInputElement = document.getElementById('result') as HTMLInputElement;
+    result.value = '';
+}
 
