@@ -1,6 +1,3 @@
-//document.getElementById('result').addEventListener('click', display);
-//import
-
 
 const button: any = document.getElementById('result');
 
