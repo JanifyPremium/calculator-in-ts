@@ -1,20 +1,25 @@
+// Get the HTML input element with the id 'result'
 var button = document.getElementById('result');
+
+// Display function to append the value of 'val' to the current value of the 'value' property of the input element
 function display(val) {
-    // Get the HTML input element with the id 'result'
-    var result = document.getElementById('result');
-    // Append the value of 'val' to the current value of the 'value' property of the input element
-    result.value += val;
-    // Return the value of 'val'
-    return val;
+  var result = document.getElementById('result');
+  result.value += val;
+
+  return val;
 }
+
+// Solve function to evaluate the current value of the input element and return the result as a string
 function solve() {
-    var result = document.getElementById('result');
-    var x = result.value;
-    var y = eval(x);
-    result.value = y.toString();
-    return y;
+  var result = document.getElementById('result');
+  var x = result.value;
+  var y = eval(x);
+  result.value = y.toString();
+  return y;
 }
+
+// ClearScreen function to set the value of the input element to an empty string
 function clearScreen() {
-    var result = document.getElementById('result');
-    result.value = '';
+  var result = document.getElementById('result');
+  result.value = '';
 }
